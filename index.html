@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Policies - Transcript Maker</title>
+    <style>
+        :root {
+            --bg-primary: #1e1f22;
+            --bg-secondary: #2b2d31;
+            --bg-tertiary: #111214;
+            --text-normal: #dbdee1;
+            --text-muted: #949ba4;
+            --text-link: #00a8fc;
+            --brand-color: #5865f2;
+            --brand-hover: #4752c4;
+            --border-color: #3f4147;
+            --danger-bg: rgba(242, 63, 66, 0.1);
+            --danger-border: #f23f42;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'gg sans', 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-normal);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        /* Header Style */
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            color: #ffffff;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        /* Tabs Navigation */
+        .tabs {
+            display: flex;
+            background-color: var(--bg-tertiary);
+            padding: 6px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border: 1px solid var(--border-color);
+        }
+
+        .tab-btn {
+            flex: 1;
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            padding: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: all 0.2s ease;
+        }
+
+        .tab-btn:hover {
+            color: var(--text-normal);
+            background-color: rgba(255,255,255,0.05);
+        }
+
+        .tab-btn.active {
+            color: #ffffff;
+            background-color: var(--brand-color);
+        }
+
+        /* Content Card */
+        .policy-content {
+            background-color: var(--bg-secondary);
+            border-radius: 12px;
+            padding: 40px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            display: none;
+        }
+
+        .policy-content.active {
+            display: block;
+        }
+
+        .meta-info {
+            display: inline-block;
+            background-color: var(--bg-tertiary);
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 25px;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Typography inside policies */
+        h2 {
+            color: #ffffff;
+            font-size: 1.4rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
+        }
+
+        p {
+            margin-bottom: 20px;
+            color: var(--text-normal);
+        }
+
+        ul {
+            margin-bottom: 25px;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 12px;
+        }
+
+        strong {
+            color: #ffffff;
+        }
+
+        a {
+            color: var(--text-link);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Alert/Highlight Callout Box */
+        .callout-box {
+            background-color: var(--danger-bg);
+            border-left: 4px solid var(--danger-border);
+            padding: 15px 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 25px 0;
+        }
+
+        .callout-box p {
+            margin-bottom: 0;
+            color: #ffffff;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            body {
+                padding: 20px 10px;
+            }
+            .policy-content {
+                padding: 20px;
+            }
+            header h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Transcript Maker</h1>
+            <p>Legal Agreements and Guidelines</p>
+        </header>
+
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchTab('tos')">Terms of Service</button>
+            <button class="tab-btn" onclick="switchTab('privacy')">Privacy Policy</button>
+        </div>
+
+        <div id="tos" class="policy-content active">
+            <div class="meta-info">Effective Date: June 10, 2026</div>
+            
+            <p>Welcome to our Discord Transcript Bot ("the Bot"). By inviting the Bot to your Discord server, accessing, or utilizing its functions, you agree to be legally bound by these Terms of Service. If you do not agree with any part of these terms, you must immediately remove the Bot from your server and cease all usage.</p>
+
+            <h2>1. Purpose and Scope of Service</h2>
+            <p>The Bot is engineered specifically to generate text transcripts of Discord text channels. This functionality is provided exclusively to assist server administrators and moderators in establishing community compliance, maintaining localized moderation records, and gathering verifiable evidence of Discord Terms of Service (ToS) or Community Guideline violations for subsequent reporting purposes.</p>
+
+            <h2>2. User Obligations & Compliance</h2>
+            <ul>
+                <li><strong>Consent and End-User Notification:</strong> By deploying this Bot, you (the Server Owner and authorized Administrators) explicitly acknowledge and agree that you bear sole legal and operational responsibility for notifying your server members that channel conversations and interactions may be logged and transcribed.</li>
+                <li><strong>Adherence to Discord Terms:</strong> You guarantee that all generated transcripts will be utilized in strict compliance with Discord’s Developer Terms of Service, Developer Policy, and Community Guidelines.</li>
+                <li><strong>Strict Prohibition of Misuse:</strong> Transcripts generated by the Bot must never be used for harassment, doxxing, blackmail, extortion, targeted public shaming, or any malicious activity. They are strictly reserved for server internal moderation and submission to official platform safety channels.</li>
+            </ul>
+
+            <h2>3. Disclaimers & Limitation of Liability</h2>
+            <ul>
+                <li><strong>"As-Is" Provision:</strong> The Bot is provided on an "as-is" and "as-available" basis. We offer no warranties, express or implied, regarding the continuous availability, typographical accuracy, or permanent storage of generated transcripts.</li>
+                <li><strong>Limitation of Liability:</strong> To the maximum extent permitted by applicable law, the developers and operators of the Bot shall not be held liable for any damages, structural losses, or account restrictions (including server bans or deletions initiated by Discord Inc.) resulting from your deployment of the Bot or the submission of transcripts to third parties. This service is independently developed and is not officially affiliated with or endorsed by Discord Inc.</li>
+            </ul>
+
+            <h2>4. Service Access & Termination</h2>
+            <p>We reserve the operational right to permanently blacklist specific Discord servers, users, or entire client systems from utilizing the Bot's infrastructure at our sole discretion. This mechanism will be enforced without prior notice if we identify, or reasonably suspect, that the Bot is being deployed maliciously, disruptively, or in clear violation of these Terms.</p>
+        </div>
+
+        <div id="privacy" class="policy-content">
+            <div class="meta-info">Effective Date: June 10, 2026</div>
+
+            <p>We respect your privacy rights and are fully committed to treating data collected by the Bot with strict transparency. This Privacy Policy outlines exactly how the Bot handles, processes, and retains data when integrated into a Discord server environment.</p>
+
+            <h2>1. Scope of Data Processing</h2>
+            <p>To successfully compile and format clean text transcripts, the Bot must dynamically read, parse, and process content flowing through designated Discord channels where it has been granted explicit read permissions. This specific data includes:</p>
+            <ul>
+                <li><strong>Message Contents:</strong> Raw text strings, formatting tags, precise timestamps, and unique Discord Message IDs.</li>
+                <li><strong>User Identifiers:</strong> Public Discord display names, account usernames, and immutable unique Discord User IDs (Snowflakes).</li>
+                <li><strong>Server Meta-Data:</strong> Discord Guild (Server) names, structural Channel names, and localized Channel IDs.</li>
+                <li><strong>Media Attachments:</strong> Hosted URLs and source links for images, videos, or raw files transmitted dynamically within the tracked channel.</li>
+            </ul>
+
+            <h2>2. Permitted Core Data Use</h2>
+            <p>Data parsed by the Bot is strictly funneled into compiling the text documents requested explicitly by authorized server administrators. We enforce a zero-monetization data policy:</p>
+            <ul>
+                <li><strong>No Commercial Distribution:</strong> We do not sell, rent, trade, lease, or distribute chat content, user metadata, or server behaviors to any third-party marketing firms or data brokers.</li>
+                <li><strong>Platform Protection:</strong> Collected text assets are meant solely to assist server personnel in maintaining order and reporting severe platform violations directly to Discord. We do not independently inspect or report logs unless legally mandated.</li>
+            </ul>
+
+            <h2>3. Data Retention and Storage Infrastructure</h2>
+            <div class="callout-box">
+                <p><strong>Secure Retention Protocol:</strong> Transcripts and their processed elements are securely stored on our servers for a rolling period of exactly <strong>30 days</strong>. This gives server administrators time to download files for verification. Following this 30-day period, the data is permanently and irreversibly purged from our storage arrays.</p>
+            </div>
+
+            <h2>4. User Privacy Rights and Opt-Outs</h2>
+            <p>Because the Bot operates directly under the structural command of independent server owners, individual users who prefer not to have their public chat interactions transcribed must contact the relevant server administration team or abstain from communicating within channels where the Bot holds operational visibility. Server administrators retain the right to clear existing active transcripts or remove the Bot completely at any point to completely halt processing.</p>
+
+            <h2>5. Operational Contact Information</h2>
+            <p>For technical inquiries, formal system data removal requests, or privacy-related questions, please get in touch with our team through the following channels:</p>
+            <ul>
+                <li><strong>Official Discord Support Server:</strong> <a href="#" target="_blank">Join our Support Server</a></li>
+                <li><strong>Administrative Contact Email:</strong> <a href="mailto:support@yourdomain.com">support@yourdomain.com</a></li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Transcript Maker. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Tab Switching Engine Logic -->
+    <script>
+        function switchTab(tabId) {
+            // Remove active classes from all buttons and content panels
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.policy-content').forEach(content => content.classList.remove('active'));
+            
+            // Add active class to clicked tab button
+            const clickedBtn = event.currentTarget;
+            clickedBtn.classList.add('active');
+            
+            // Display targeted content panel
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
